@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="login.json"
+            app:lottie_loop="true" />
+
+
+        <EditText
+            android:id="@+id/emailSignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/acme"
+            android:backgroundTint="#3490dc"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="#465282"
+            android:textColorHint="#b3c0d7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView2" />
+
+        <EditText
+            android:id="@+id/PasswordSignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#3490dc"
+            android:ems="10"
+            android:hint="@string/password"
+            android:fontFamily="@font/acme"
+            android:textColor="#465282"
+            android:inputType="textPassword"
+            android:textColorHint="#b3c0d7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailSignIn" />
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/acme"
+            android:layout_marginStart="15dp"
+            android:text="@string/forgot_password"
+            android:textColor="#3490dc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PasswordSignIn" />
+
+        <Button
+            android:id="@+id/SignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/sign_in"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/acme"
+            android:textAllCaps="false"
+            android:background="@drawable/ic_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgotPassword"
+            app:layout_constraintVertical_bias="0.24" />
+
+        <TextView
+            android:id="@+id/orIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/acme"
+            android:text="OR"
+            android:textAlignment="center"
+            android:textColor="#3490dc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SignIn" />
+
+        <TextView
+            android:id="@+id/donthaveanAccount"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/acme"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/don_t_have_an_account_sign_up"
+            android:textColor="#3490dc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SignIn"
+            app:layout_constraintVertical_bias="0.513" />
+
+        <View
+            android:id="@+id/dividerSignIn"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="10dp"
+            android:background="#3490dc"
+            app:layout_constraintBottom_toTopOf="@id/donthaveanAccount"
+            app:layout_constraintEnd_toStartOf="@+id/orIn"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SignIn"
+            app:layout_constraintVertical_bias="0.565" />
+
+        <View
+            android:id="@+id/divider2SignIn"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="120dp"
+            android:background="#3490dc"
+            app:layout_constraintBottom_toTopOf="@id/donthaveanAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/orIn"
+            app:layout_constraintTop_toBottomOf="@id/SignIn"
+            app:layout_constraintVertical_bias="0.565" />
+
+        <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressBarSignIn"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:SpinKit_Color="#3490dc"
+            app:layout_constraintBottom_toTopOf="@+id/SignIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
